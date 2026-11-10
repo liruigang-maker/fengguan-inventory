@@ -1,0 +1,25 @@
+{
+  "name": "fengguan-inventory",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -n server,web -c blue,green \"node server/index.js\" \"vite --config web/vite.config.js\"",
+    "build": "vite build --config web/vite.config.js",
+    "start": "node server/index.js",
+    "check": "node server/selfcheck.js"
+  },
+  "dependencies": {
+    "@fastify/cookie": "^11.0.2",
+    "@fastify/static": "^8.2.0",
+    "exceljs": "^4.4.0",
+    "fastify": "^5.6.1",
+    "vant": "^4.9.21",
+    "vue": "^3.5.22",
+    "vue-router": "^4.6.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.1",
+    "concurrently": "^9.2.1",
+    "vite": "^7.1.12"
+  }
+}
